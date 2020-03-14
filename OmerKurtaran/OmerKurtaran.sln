@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmerKurtaran", "OmerKurtaran\OmerKurtaran.csproj", "{B24C3CE4-968F-46DE-B08B-932692AE90E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmerKurtaran.UI", "OmerKurtaran\OmerKurtaran.UI.csproj", "{B24C3CE4-968F-46DE-B08B-932692AE90E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmerKurtaran.DAL", "OmerKurtaran.DAL\OmerKurtaran.DAL.csproj", "{60AA2467-6C7F-491B-85C3-2924EABC5194}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmerKurtaran.BLL", "OmerKurtaran.BLL\OmerKurtaran.BLL.csproj", "{03B5CCA9-09C4-4AA2-B133-FDCD5FDEDFD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B24C3CE4-968F-46DE-B08B-932692AE90E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B24C3CE4-968F-46DE-B08B-932692AE90E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B24C3CE4-968F-46DE-B08B-932692AE90E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60AA2467-6C7F-491B-85C3-2924EABC5194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60AA2467-6C7F-491B-85C3-2924EABC5194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60AA2467-6C7F-491B-85C3-2924EABC5194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60AA2467-6C7F-491B-85C3-2924EABC5194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B5CCA9-09C4-4AA2-B133-FDCD5FDEDFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B5CCA9-09C4-4AA2-B133-FDCD5FDEDFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B5CCA9-09C4-4AA2-B133-FDCD5FDEDFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B5CCA9-09C4-4AA2-B133-FDCD5FDEDFD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
