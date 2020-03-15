@@ -36,6 +36,8 @@ namespace OmerKurtaran.DAL.Db
 
         public int YazarID { get; set; }
 
+        public int ResimID { get; set; }
+
         public virtual Kategori Kategori { get; set; }
 
         public virtual Yazar Yazar { get; set; }

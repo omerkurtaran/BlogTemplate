@@ -62,11 +62,21 @@
     <Compile Include="Db\sysdiagram.cs" />
     <Compile Include="Db\Yazar.cs" />
     <Compile Include="Db\Yorum.cs" />
+    <Compile Include="Migrations\202003151058107_Initialize.cs" />
+    <Compile Include="Migrations\202003151058107_Initialize.designer.cs">
+      <DependentUpon>202003151058107_Initialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202003151058107_Initialize.resx">
+      <DependentUpon>202003151058107_Initialize.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
