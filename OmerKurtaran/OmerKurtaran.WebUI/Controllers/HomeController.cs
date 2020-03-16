@@ -16,6 +16,12 @@ namespace OmerKurtaran.WebUI.Controllers
             return View();
         }
 
+        public ActionResult MakaleListele()
+        {//makalelistelewidget view ini shared klasörü içine bastığmız için return view kısmında controller vermeye gerek kalmadı
+            var data = db.Makales.ToList();
+            return View("MakaleListeleWidget",data);
+        }
+
         public PartialViewResult KategoriWidget()
         {
             return PartialView(db.Kategoris.ToList());

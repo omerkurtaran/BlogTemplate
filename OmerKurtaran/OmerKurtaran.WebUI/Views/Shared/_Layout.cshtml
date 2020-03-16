@@ -105,7 +105,7 @@
 
                     <!-- /.blog-posts -->
 
-                    <div class="pagination">
+                    @*<div class="pagination">
                         <ul>
                             <li><a href="#" class="btn">Prev</a></li>
                             <li class="active"><a href="#" class="btn"><span>1</span></a></li>
@@ -113,23 +113,34 @@
                             <li><a href="#" class="btn"><span>3</span></a></li>
                             <li><a href="#" class="btn">Next</a></li>
                         </ul>
-                    </div>
+                    </div>*@
                     <!-- /.pagination -->
 
                 </div>
                 <!-- /.content -->
                 <aside class="col-sm-4 sidebar lp30">
-                    @RenderSection("PopulerMakaleler",false)
+                   
+                    @{ 
+                        Html.RenderAction("PopulerMakalelerWidget", "Home");
+                    }
                     <!-- /.widget -->
-                    @RenderSection("SiteHakkinda",false)
+                    @{ 
+                        Html.RenderPartial("SiteHakkinda");
+                    }
                     <!-- /.widget -->
-                    @RenderSection("Arama",false)
+                    @{ 
+                        Html.RenderPartial("Arama");
+                    }
                     <!-- /.widget -->
                     
                     <!-- /.widget -->
-                    @RenderSection("Kategoriler",false)
+                    @{ 
+                        Html.RenderAction("KategoriWidget", "Home");
+                    }
                     <!-- /.widget -->
-                    @RenderSection("Etiketler",false)
+                    @{ 
+                        Html.RenderAction("EtiketWidget", "Etiket");
+                    }
                     <!-- /.widget -->
                 </aside>
                 <!-- /.col-sm-4 .sidebar -->

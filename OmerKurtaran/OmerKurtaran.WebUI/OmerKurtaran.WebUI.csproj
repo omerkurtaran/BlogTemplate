@@ -370,6 +370,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EtiketController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KategoriController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -420,8 +421,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Etiket\EtiketWidget.cshtml" />
     <Content Include="Views\Home\KategoriWidget.cshtml" />
-    <Content Include="Views\Home\SiteHakkinda.cshtml" />
+    <Content Include="Views\Shared\SiteHakkinda.cshtml" />
     <Content Include="Views\Home\PopulerMakalelerWidget.cshtml" />
+    <Content Include="Views\Shared\MakaleListeleWidget.cshtml" />
+    <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Shared\Arama.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

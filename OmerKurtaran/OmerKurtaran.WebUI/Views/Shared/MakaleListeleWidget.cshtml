@@ -1,0 +1,49 @@
+﻿
+@{ 
+    Layout = null;
+}
+
+@model IEnumerable<OmerKurtaran.WebUI.Models.Makale>
+
+@helper IcerikKisalt(string icerik)
+{
+    if (icerik.Length > 300)
+    {
+        icerik.Substring(0, 300);
+
+    }
+    else
+    {
+        @icerik;
+    }
+}
+
+<div class="blog-posts col-blog">
+    @foreach (OmerKurtaran.WebUI.Models.Makale makale in Model)
+    {
+        <div class="post row">
+            <div class="col-sm-4">
+                <figure>
+                    <a href="/Makale/Detay/@makale.MakaleId">
+                        <div class="text-overlay">
+                            <div class="info"><span>Read More</span></div>
+                        </div>
+                        <img src="@makale.Resim.OrtaBoyut" alt="" />
+                    </a>
+                </figure>
+            </div>
+            <div class="col-sm-8 post-content">
+                <div class="meta">
+                    <span class="date">@makale.EklenmeTarihi.ToShortDateString()</span>
+                    <span class="comments"><a href="#">@makale.Yorums.Count<i class="icon-chat-1"></i></a></span>
+                </div>
+                <h2 class="post-title"><a href="/Makale/Detay/@makale.MakaleId">@makale.Baslik</a></h2>
+                <p>
+                    @IcerikKisalt(makale.Icerik)
+                </p>
+            </div>
+        </div>
+    }
+
+
+</div>
