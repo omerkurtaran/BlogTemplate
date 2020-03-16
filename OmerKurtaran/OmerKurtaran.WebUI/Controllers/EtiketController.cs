@@ -12,9 +12,9 @@ namespace OmerKurtaran.WebUI.Controllers
     {
         OmerKurtaranEntities db = new OmerKurtaranEntities();
         // GET: Etiket
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            return View();
+            return View(id);
         }
 
 
@@ -23,5 +23,11 @@ namespace OmerKurtaran.WebUI.Controllers
             return PartialView(db.Etikets.ToList());
         }
 
+        public ActionResult MakaleListele(int id)
+        {
+            var data = db.Makales.Where(z => z.Etikets.Any(y => y.EtiketId == id)).ToList();
+            return PartialView(db.Etikets.ToList());
+        }
+         
     }
 }
