@@ -1,4 +1,4 @@
-namespace OmerKurtaran.WebUI.Models
+namespace OmerKurtaran.WebUI.Model
 {
     using System;
     using System.Collections.Generic;
@@ -13,6 +13,7 @@ namespace OmerKurtaran.WebUI.Models
         public Resim()
         {
             Makales = new HashSet<Makale>();
+            Yazars = new HashSet<Yazar>();
         }
 
         [Key]
@@ -35,10 +36,7 @@ namespace OmerKurtaran.WebUI.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Makale> Makales { get; set; }
 
-        public virtual Makale Makale { get; set; }
-
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Yazar> Yazars { get; set; }
-
-
     }
 }
