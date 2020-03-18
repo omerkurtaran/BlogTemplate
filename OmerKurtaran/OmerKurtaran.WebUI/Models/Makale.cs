@@ -2,6 +2,7 @@ namespace OmerKurtaran.WebUI.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -26,13 +27,14 @@ namespace OmerKurtaran.WebUI.Models
         [Required]
         public string Icerik { get; set; }
 
+        [DefaultValue(typeof(DateTime), "")]
         public DateTime EklenmeTarihi { get; set; }
 
-        public int KategoriID { get; set; }
+        public int? KategoriID { get; set; }
 
-        public int GoruntulenmeSayisi { get; set; }
+        public int? GoruntulenmeSayisi { get; set; }
 
-        public int Begeni { get; set; }
+        public int? Begeni { get; set; }
 
         public int YazarID { get; set; }
 
