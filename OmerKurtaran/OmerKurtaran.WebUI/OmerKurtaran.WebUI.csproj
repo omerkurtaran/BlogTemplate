@@ -105,9 +105,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\image\defaultUser.png" />
     <Content Include="Content\index.html" />
-    <Content Include="Content\MakaleResim\BuyukBoyut\770x440.png" />
-    <Content Include="Content\MakaleResim\KucukBoyut\70.png" />
-    <Content Include="Content\MakaleResim\OrtaBoyut\orta.png" />
+    <Content Include="Content\MakaleResim\BuyukBoyut\120.png" />
+    <Content Include="Content\MakaleResim\KucukBoyut\120.png" />
+    <Content Include="Content\MakaleResim\OrtaBoyut\120.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style\css\bootstrap.min.css" />
@@ -357,7 +357,7 @@
     <Content Include="Content\style\type\fontello\fontello-circle.svg" />
     <Content Include="Content\style\type\fontello\fontello-social.svg" />
     <Content Include="Content\style\type\fontello\fontello.svg" />
-    <Content Include="Content\YazarResim\120.png" />
+    <Content Include="Content\YazarResim\kadinkucuk.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />

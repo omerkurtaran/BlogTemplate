@@ -26,7 +26,7 @@ namespace OmerKurtaran.WebUI.Controllers
         public ActionResult MakaleListele(int id)
         {
             var data = db.Makales.Where(z => z.Etikets.Any(y => y.EtiketId == id)).ToList();
-            return PartialView(db.Etikets.ToList());
+            return PartialView("MakaleListeleWidget",data);
         }
          
     }
