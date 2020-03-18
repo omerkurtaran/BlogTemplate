@@ -38,8 +38,8 @@ namespace OmerKurtaran.WebUI.Models
 
         public int YazarID { get; set; }
 
-        public int ResimID { get; set; }
-
+        public Nullable<int>  ResimID { get; set; }
+          
         public virtual Kategori Kategori { get; set; }
 
         public virtual Resim Resim { get; set; }

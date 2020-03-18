@@ -17,6 +17,7 @@ namespace OmerKurtaran.WebUI.Models
 
         }
 
+        [Key]
         public int YazarId { get; set; }
 
         [Required]
@@ -43,10 +44,8 @@ namespace OmerKurtaran.WebUI.Models
 
         public Resim Resim { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Makale> Makales { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kullanici> Kullanicis { get; set; }
 
     }

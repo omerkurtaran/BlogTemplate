@@ -20,12 +20,14 @@
         </figure>
         <div class="post-content">
             <p>@Model.Icerik</p>
+
             <div class="meta tags">
                 @foreach (OmerKurtaran.WebUI.Models.Etiket etiket in Model.Etikets)
-                 {
-                     <a href="/Etiket/Index/@etiket.EtiketId">@etiket.Adi</a>
-                 }
+                {
+                    <a href="/Etiket/Index/@etiket.EtiketId">@etiket.Adi</a>
+                }
             </div>
+
             <div class="click-share">
                 <ul>
                     <li><a class="btn share-facebook" href="#">Like</a></li>

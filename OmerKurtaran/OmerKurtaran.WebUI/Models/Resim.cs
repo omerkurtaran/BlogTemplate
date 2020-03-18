@@ -13,6 +13,7 @@ namespace OmerKurtaran.WebUI.Models
         public Resim()
         {
             Makales = new HashSet<Makale>();
+            Yazars = new HashSet<Yazar>();
         }
 
         [Key]
@@ -32,7 +33,6 @@ namespace OmerKurtaran.WebUI.Models
         [StringLength(250)]
         public string Video { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Makale> Makales { get; set; }
 
         public virtual Makale Makale { get; set; }

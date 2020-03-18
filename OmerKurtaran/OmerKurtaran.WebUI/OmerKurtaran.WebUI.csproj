@@ -357,7 +357,7 @@
     <Content Include="Content\style\type\fontello\fontello-circle.svg" />
     <Content Include="Content\style\type\fontello\fontello-social.svg" />
     <Content Include="Content\style\type\fontello\fontello.svg" />
-    <Content Include="Content\YazarResim\kadinkucuk.png" />
+    <Content Include="Content\YazarResim\defaultUser.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
