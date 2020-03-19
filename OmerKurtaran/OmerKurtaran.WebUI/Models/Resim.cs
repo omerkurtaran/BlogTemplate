@@ -13,7 +13,6 @@ namespace OmerKurtaran.WebUI.Models
         public Resim()
         {
             Makales = new HashSet<Makale>();
-            Yazars = new HashSet<Yazar>();
         }
 
         [Key]
@@ -37,7 +36,6 @@ namespace OmerKurtaran.WebUI.Models
 
         public virtual Makale Makale { get; set; }
 
-        public virtual ICollection<Yazar> Yazars { get; set; }
 
 
     }

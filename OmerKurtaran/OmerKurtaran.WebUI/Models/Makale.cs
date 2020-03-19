@@ -36,15 +36,13 @@ namespace OmerKurtaran.WebUI.Models
 
         public int? Begeni { get; set; }
 
-        public int YazarID { get; set; }
+        public Kullanici YazarID { get; set; }
 
         public Nullable<int>  ResimID { get; set; }
           
         public virtual Kategori Kategori { get; set; }
 
         public virtual Resim Resim { get; set; }
-
-        public virtual Yazar Yazar { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Resim> Resims { get; set; }

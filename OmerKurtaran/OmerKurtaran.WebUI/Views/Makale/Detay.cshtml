@@ -5,12 +5,13 @@
 
 @model OmerKurtaran.WebUI.Models.Makale
 
+
 <div class="blog-posts classic-blog single">
     <div class="post format-image">
         <div class="meta">
             <span class="date">@Model.EklenmeTarihi</span>
             <span class="categories">
-                <a href="/Kategori/Index/@Model.KategoriID">@Model.Kategori.Adi</a>, <a href="#">Photography</a>
+                <a href="/Kategori/Index/@Model.KategoriID">@Model.Kategori.Adi</a>
             </span>
             <span class="comments"><a href="#Yorum">@Model.Yorums.Count <i class="icon-chat-1"></i></a></span>
         </div>
@@ -20,7 +21,7 @@
         </figure>
         <div class="post-content">
             <p>@Model.Icerik</p>
-
+        
             <div class="meta tags">
                 @foreach (OmerKurtaran.WebUI.Models.Etiket etiket in Model.Etikets)
                 {
@@ -45,15 +46,13 @@
 <!-- /.blog-posts -->
 
 <div class="about-author dark-wrapper">
-    <div class="author-image"> <img alt="" src="@Model.Yazar.Resim.OrtaBoyut" /> </div>
+    <div class="author-image"> <img alt="" src="#" /> </div>
     <div class="author-details">
         <h3>@Model.Yazar.Adi @Model.Yazar.Soyadi Hakkında</h3>
         <p>@Model.Yazar.Aciklama</p>
         <ul class="social">
             <li><a href="#"><i class="icon-s-twitter"></i></a></li>
             <li><a href="#"><i class="icon-s-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-s-pinterest"></i></a></li>
-            <li><a href="#"><i class="icon-s-dribbble"></i></a></li>
             <li><a href="#"><i class="icon-s-linkedin"></i></a></li>
         </ul>
     </div>
@@ -93,8 +92,8 @@
 <!-- /#comments -->
 <div class="divide100"></div>
 <div class="comment-form-wrapper">
-    <h3>Düşüncelerini paylaşmak ister misin?</h3>
-    <p>E-Mail adresiniz yayınlanmayacaktır. Zorunlu alanlar * ile işaretlenmiştir.</p>
+    <h3>Düsüncelerini paylasmak ister misin?</h3>
+    <p>E-Mail adresiniz yayinlanmayacaktir. Zorunlu alanlar * ile isaretlenmistir.</p>
     <form class="comment-form" name="form_name" action="/Makale/YorumYaz/@Model.MakaleId" method="post">
         <div class="name-field">
             <label><i class="icon-user"></i></label>
@@ -111,7 +110,7 @@
         <div class="message-field">
             <textarea name="Yorum" id="textarea" rows="5" cols="30" placeholder="Yorumunuz..."></textarea>
         </div>
-        <input type="submit" value="Submit" name="submit" class="btn btn-submit" />
+        <input type="submit" value="Gönder" name="submit" class="btn btn-submit" />
     </form>
 </div>
 <!-- /.comment-form-wrapper -->

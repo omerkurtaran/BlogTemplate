@@ -9,12 +9,13 @@ namespace OmerKurtaran.WebUI.Models
     [Table("Kullanici")]
     public partial class Kullanici
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Kullanici()
         {
-            Yazars = new HashSet<Yazar>();
+            KayitTarihi = DateTime.Now;
+            Makales = new HashSet<Makale>();
+            KullaniciRols = new HashSet<KullaniciRol>();
         }
-
+        [Key]
         public int KullaniciId { get; set; }
 
         [Required]
@@ -41,9 +42,17 @@ namespace OmerKurtaran.WebUI.Models
 
         public DateTime? DogumTarihi { get; set; }
 
-        public DateTime KayitTarihi { get; set; }
+        public bool? Yazar { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Yazar> Yazars { get; set; }
+        public bool? Aktif { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM/DD/YYYY}")]
+        public DateTime? KayitTarihi { get; set; }
+
+        public virtual ICollection<Makale> Makales { get; set; }
+
+        public virtual ICollection<KullaniciRol> KullaniciRols { get; set; }
+
     }
 }

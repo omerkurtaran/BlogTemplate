@@ -357,7 +357,7 @@
     <Content Include="Content\style\type\fontello\fontello-circle.svg" />
     <Content Include="Content\style\type\fontello\fontello-social.svg" />
     <Content Include="Content\style\type\fontello\fontello.svg" />
-    <Content Include="Content\YazarResim\defaultUser.png" />
+    <Content Include="Content\YazarResim\kadinkucuk.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -372,11 +372,13 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Classes\CustomRoleProvider.cs" />
     <Compile Include="App_Classes\Settings.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EtiketController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\KullaniciController.cs" />
     <Compile Include="Controllers\MakaleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -385,15 +387,20 @@
     <Compile Include="Migrations\202003172311092_base.designer.cs">
       <DependentUpon>202003172311092_base.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003182250394_second.cs" />
+    <Compile Include="Migrations\202003182250394_second.designer.cs">
+      <DependentUpon>202003182250394_second.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Etiket.cs" />
     <Compile Include="Models\Kategori.cs" />
     <Compile Include="Models\Kullanici.cs" />
+    <Compile Include="Models\KullaniciRol.cs" />
     <Compile Include="Models\Makale.cs" />
     <Compile Include="Models\OmerKurtaranEntities.cs" />
     <Compile Include="Models\Resim.cs" />
+    <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\sysdiagram.cs" />
-    <Compile Include="Models\Yazar.cs" />
     <Compile Include="Models\Yorum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -440,6 +447,8 @@
     <Content Include="Views\Shared\Arama.cshtml" />
     <Content Include="Views\Etiket\Index.cshtml" />
     <Content Include="Views\Makale\Detay.cshtml" />
+    <Content Include="Views\Kullanici\GirisYap.cshtml" />
+    <Content Include="Views\Makale\MakaleEkle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -453,6 +462,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003172311092_base.resx">
       <DependentUpon>202003172311092_base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003182250394_second.resx">
+      <DependentUpon>202003182250394_second.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
