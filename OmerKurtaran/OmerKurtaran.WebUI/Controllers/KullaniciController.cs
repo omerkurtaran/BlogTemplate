@@ -43,7 +43,7 @@ namespace OmerKurtaran.WebUI.Controllers
                 FormsAuthentication.RedirectFromLoginPage(kullanici.KullaniciAdi, true);
 
             }
-
+            //ındex home a al
             return RedirectToAction("GirisYap");
 
         }
@@ -61,6 +61,28 @@ namespace OmerKurtaran.WebUI.Controllers
                 return "";
             }
 
+        }
+        //redirecturl ile kullanıcının çıkış yaparken bulunduğu sayfanın url ni almak için yaptım
+        public ActionResult CikisYap()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index","Home");
+        }
+
+        public ActionResult UyeOL()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult UyeOL(Kullanici kl)
+        {
+            kl.Yazar = false;
+            kl.Onaylandi = true;
+            kl.Aktif = true;
+            db.Kullanicis.Add(kl);
+            db.SaveChanges();
+            return RedirectToAction("GirisYap");
         }
 
 

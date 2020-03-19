@@ -11,12 +11,11 @@ namespace OmerKurtaran.WebUI.Models
     public partial class KullaniciRol
     {
         [Key]
-        public int KullaniciRolId { get; set; }
-
-        
+        [Column(Order = 1)]
         public virtual Kullanici Kullanici { get; set; }
 
-        
+        [Key]
+        [Column(Order = 2)]
         public virtual Rol Rol { get; set; }
 
 

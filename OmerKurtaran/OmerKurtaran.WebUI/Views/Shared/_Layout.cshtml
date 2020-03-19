@@ -40,42 +40,61 @@
                                         <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
                                         <li><a href="/Yazar/Makalelerim">Makalelerim </a></li>
                                         @*<li><a href="blog3.html">Grid View 2 Columns</a></li>
-                                            <li><a href="blog4.html">Grid View 3 Columns</a></li>
-                                            <li><a href="blog-post.html">Blog Post</a></li>*@
+                    <li><a href="blog4.html">Grid View 3 Columns</a></li>
+                    <li><a href="blog-post.html">Blog Post</a></li>*@
                                     </ul>
                                 </li>
                             }
 
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li class="dropdown">
+                                    <a href="/Admin/Index" class="dropdown-toggle js-activated">Admin Paneli</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
+                                        <li><a href="/Kategori/KategoriEkle">Kategori Ekle</a></li>
+                                        <li><a href="/Etiket/EtiketEkle">Etiket Ekle</a></li>
+                                        <li><a href="/Admin/RolEkle">Rol Ekle</a></li>
+                                        <li><a href="/Admin/KullaniciEkle">Kullanıcı Ekle</a></li>
+                                        <li><a href="/Admin/YazarOnaylari">Yazar Onayları</a></li>
+                                    </ul>
+                                </li>
+                            }
 
-                            <li class="dropdown">
-                                <a href="/Admin/Index" class="dropdown-toggle js-activated">Admin Paneli</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
-                                    <li><a href="/Kategori/KategoriEkle">Kategori Ekle</a></li>
-                                    <li><a href="/Etiket/EtiketEkle">Etiket Ekle</a></li>
-                                    <li><a href="/Admin/RolEkle">Rol Ekle</a></li>
-                                    <li><a href="/Admin/KullaniciEkle">Kullanıcı Ekle</a></li>
-                                    <li><a href="/Admin/YazarOnaylari">Yazar Onayları</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle js-activated">Pages</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle js-activated">Features</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="elements.html">Elements</a></li>
-                                    <li><a href="headings.html">Headings</a></li>
-                                    <li><a href="pricing.html">Pricing Tables</a></li>
-                                    <li><a href="flat-icons.html">Flat Icons</a></li>
-                                    <li><a href="font-icons.html">Font Icons</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            @if (!User.IsInRole("Yazar") || !User.Identity.IsAuthenticated || !User.IsInRole("Admin"))
+                            {
+                                <li >
+                                    <a href="/Yazar/YazarOl" class="dropdown-toggle js-activated">Yazar Ol</a>
+
+                                </li>
+                            }
+
+
+                            @if (!User.Identity.IsAuthenticated)
+                            {
+                                <li >
+                                    <a href="/Kullanici/UyeOl" class="dropdown-toggle js-activated">Üye Ol</a>
+
+                                </li>
+                            }
+
+
+                            @*otantike olmuşsa çıkış yap görülsün
+                              olmamışsa giriş yap gözüksün
+                            *@
+                            @if (User.Identity.IsAuthenticated)
+                            {
+
+                                <li><a href="/Kullanici/CikisYap">Cikis Yap</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="/Kullanici/GirisYap">Giris Yap</a></li>
+                            }
+
+
+
+
                             <li class="dropdown social-dropdown pull-right">
                                 <div class="share btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-heart-1"></i></div>
                                 <ul class="button-group dropdown-menu dropdown-menu-right share-links">

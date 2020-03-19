@@ -38,11 +38,12 @@ namespace OmerKurtaran.WebUI.Models
         [StringLength(100)]
         public string MailAdres { get; set; }
 
-        public bool? Cinsiyet { get; set; }
-
-        public DateTime? DogumTarihi { get; set; }
+        [StringLength(500)]
+        public string Aciklama { get; set; }
 
         public bool? Yazar { get; set; }
+
+        public bool? Onaylandi { get; set; }
 
         public bool? Aktif { get; set; }
 
