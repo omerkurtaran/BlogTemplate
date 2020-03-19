@@ -3,25 +3,51 @@
     ViewBag.Title = "Giriş Yap";
 }
 
-<form action="/Kullanici/GirisYap" method="post">
-    <table>
-        <tr>
-            <td>Kullanıcı Adı : </td>
-            <td>
-                <input type="text" name="KullaniciAdi" value="" />
-            </td>
+@section js{
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+}
 
-        </tr>
-        <tr>
-            <td>Parola :</td>
-            <td>
-                <input type="password" name="Parola" value="" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <input type="submit" name="name" value="Giriş Yap" />
-            </td>
-        </tr>
-    </table>
-</form>
+<form class="was-validated" action="/Kullanici/GirisYap" method="post">
+        <table>
+            <tr>
+                <td>Kullanıcı Adı  </td>
+                <td>
+                    <input type="text" name="KullaniciAdi" value="" />
+                </td>
+
+            </tr>
+            <tr>
+                <td>Parola </td>
+                <td>
+                    <input type="password" name="Parola" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" name="name" class="btn btn-primary">Giriş Yap</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+@*<form action="/Kullanici/GirisYap" class="was-validated" method="post">
+    <div class="form-group">
+        <label for="uname">Kullanıcı Adı :</label>
+        <input type="text" class="form-control" id="uname" placeholder="Kullanici Adi" name="KullaniciAdi" required>
+        <div class="valid-feedback">Tekrar Dene</div>
+        <div class="invalid-feedback">Lütfen boş alanları doldurunuz.</div>
+    </div>
+    <div class="form-group">
+        <label for="pwd">Parola :</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="Parola" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group form-check">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember" required> Beni Hatırla
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+</form>*@

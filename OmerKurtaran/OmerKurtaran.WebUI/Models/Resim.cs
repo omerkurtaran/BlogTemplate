@@ -9,10 +9,9 @@ namespace OmerKurtaran.WebUI.Models
     [Table("Resim")]
     public partial class Resim
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Resim()
         {
-            Makales = new HashSet<Makale>();
+            MakaleResims = new HashSet<MakaleResim>();
         }
 
         [Key]
@@ -27,14 +26,11 @@ namespace OmerKurtaran.WebUI.Models
         [StringLength(250)]
         public string BuyukBoyut { get; set; }
 
-        public int? MakaleID { get; set; }
-
         [StringLength(250)]
         public string Video { get; set; }
 
-        public virtual ICollection<Makale> Makales { get; set; }
+        public virtual ICollection<MakaleResim> MakaleResims { get; set; }
 
-        public virtual Makale Makale { get; set; }
 
 
 

@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -397,6 +400,7 @@
     <Compile Include="Models\Kullanici.cs" />
     <Compile Include="Models\KullaniciRol.cs" />
     <Compile Include="Models\Makale.cs" />
+    <Compile Include="Models\MakaleResim.cs" />
     <Compile Include="Models\OmerKurtaranEntities.cs" />
     <Compile Include="Models\Resim.cs" />
     <Compile Include="Models\Rol.cs" />

@@ -13,7 +13,7 @@ namespace OmerKurtaran.WebUI.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Makale()
         {
-            Resims = new HashSet<Resim>();
+            MakaleResims = new HashSet<MakaleResim>();
             Yorums = new HashSet<Yorum>();
             Etikets = new HashSet<Etiket>();
         }
@@ -37,20 +37,13 @@ namespace OmerKurtaran.WebUI.Models
         public int? Begeni { get; set; }
 
         public Kullanici YazarID { get; set; }
-
-        public Nullable<int>  ResimID { get; set; }
           
         public virtual Kategori Kategori { get; set; }
 
-        public virtual Resim Resim { get; set; }
+        public virtual ICollection<MakaleResim> MakaleResims { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Resim> Resims { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Yorum> Yorums { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Etiket> Etikets { get; set; }
     }
 }

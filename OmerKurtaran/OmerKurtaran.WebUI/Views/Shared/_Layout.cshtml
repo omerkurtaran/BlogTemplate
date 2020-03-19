@@ -26,30 +26,36 @@
                 <div class="container">
                     <div class="basic-wrapper">
                         <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                        <div class="navbar-brand"><a href="index.html"><img src="style/images/logo.png" alt="" data-src="style/images/logo.png" data-ret="style/images/logo@2x.png" class="retina" /></a></div>
+                        <div class="navbar-brand"><a href="index.html"><img src="/Content/style/images/logo.png" alt="" data-src="/Content/style/images/logo.png" data-ret="/Content/style/images/logo@2x.png" class="retina" /></a></div>
                     </div>
                     <nav class="collapse navbar-collapse pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="current dropdown">
-                                <a href="#" class="dropdown-toggle js-activated">Journal</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="blog.html">List View</a></li>
-                                    <li><a href="blog2.html">Classic View</a></li>
-                                    <li><a href="blog3.html">Grid View 2 Columns</a></li>
-                                    <li><a href="blog4.html">Grid View 3 Columns</a></li>
-                                    <li><a href="blog-post.html">Blog Post</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="/Home/Index">AnaSayfa</a></li>
+
+                            @if (User.IsInRole("Yazar"))
+                            {
+                                <li class="current dropdown">
+                                    <a href="/Yazar/Index" class="dropdown-toggle js-activated">Yazar Paneli</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
+                                        <li><a href="/Yazar/Makalelerim">Makalelerim </a></li>
+                                        @*<li><a href="blog3.html">Grid View 2 Columns</a></li>
+                                            <li><a href="blog4.html">Grid View 3 Columns</a></li>
+                                            <li><a href="blog-post.html">Blog Post</a></li>*@
+                                    </ul>
+                                </li>
+                            }
+
+
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle js-activated">Our Works</a>
+                                <a href="/Admin/Index" class="dropdown-toggle js-activated">Admin Paneli</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="portfolio.html">Classic Portfolio</a></li>
-                                    <li><a href="portfolio2.html">Fullscreen Portfolio</a></li>
-                                    <li><a href="portfolio-post.html">Post with Images</a></li>
-                                    <li><a href="portfolio-post2.html">Post with Columns</a></li>
-                                    <li><a href="portfolio-post3.html">Post with Video</a></li>
-                                    <li><a href="portfolio-post4.html">Post with Slider</a></li>
+                                    <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
+                                    <li><a href="/Kategori/KategoriEkle">Kategori Ekle</a></li>
+                                    <li><a href="/Etiket/EtiketEkle">Etiket Ekle</a></li>
+                                    <li><a href="/Admin/RolEkle">Rol Ekle</a></li>
+                                    <li><a href="/Admin/KullaniciEkle">Kullanıcı Ekle</a></li>
+                                    <li><a href="/Admin/YazarOnaylari">Yazar Onayları</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -92,7 +98,7 @@
         <div class="offset"></div>
         <div class="dark-wrapper page-title">
             <div class="container inner">
-                <h1> Our Journal </h1>
+                <h1> Ömer KURTARAN </h1>
             </div>
             <!--/.container -->
         </div>
@@ -104,41 +110,39 @@
                     @RenderBody()
 
                     <!-- /.blog-posts -->
-
                     @*<div class="pagination">
-                        <ul>
-                            <li><a href="#" class="btn">Prev</a></li>
-                            <li class="active"><a href="#" class="btn"><span>1</span></a></li>
-                            <li><a href="#" class="btn"><span>2</span></a></li>
-                            <li><a href="#" class="btn"><span>3</span></a></li>
-                            <li><a href="#" class="btn">Next</a></li>
-                        </ul>
-                    </div>*@
+                            <ul>
+                                <li><a href="#" class="btn">Prev</a></li>
+                                <li class="active"><a href="#" class="btn"><span>1</span></a></li>
+                                <li><a href="#" class="btn"><span>2</span></a></li>
+                                <li><a href="#" class="btn"><span>3</span></a></li>
+                                <li><a href="#" class="btn">Next</a></li>
+                            </ul>
+                        </div>*@
                     <!-- /.pagination -->
 
                 </div>
                 <!-- /.content -->
                 <aside class="col-sm-4 sidebar lp30">
-                   
-                    @{ 
+
+                    @{
                         Html.RenderAction("PopulerMakalelerWidget", "Home");
                     }
                     <!-- /.widget -->
-                    @{ 
+                    @{
                         Html.RenderPartial("SiteHakkinda");
                     }
                     <!-- /.widget -->
-                    @{ 
+                    @{
                         Html.RenderPartial("Arama");
                     }
                     <!-- /.widget -->
-                    
                     <!-- /.widget -->
-                    @{ 
+                    @{
                         Html.RenderAction("KategoriWidget", "Home");
                     }
                     <!-- /.widget -->
-                    @{ 
+                    @{
                         Html.RenderAction("EtiketWidget", "Etiket");
                     }
                     <!-- /.widget -->
@@ -269,5 +273,6 @@
     <script src="/Content/style/js/bootstrap.min.js"></script>
     <script src="/Content/style/js/plugins.js"></script>
     <script src="/Content/style/js/scripts.js"></script>
+    @RenderSection("js", false)
 </body>
 </html>
