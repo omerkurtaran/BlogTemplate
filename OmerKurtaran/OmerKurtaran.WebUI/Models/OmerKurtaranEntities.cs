@@ -20,7 +20,6 @@ namespace OmerKurtaran.WebUI.Models
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Yorum> Yorums { get; set; }
         public virtual DbSet<Rol> Rols { get; set; }
-        public virtual DbSet<KullaniciRol> KullaniciRols { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

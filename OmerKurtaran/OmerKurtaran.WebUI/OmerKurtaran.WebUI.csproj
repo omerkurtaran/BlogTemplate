@@ -395,13 +395,15 @@
     <Compile Include="Migrations\202003182250394_second.designer.cs">
       <DependentUpon>202003182250394_second.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003192322088_initialize.cs" />
+    <Compile Include="Migrations\202003192322088_initialize.designer.cs">
+      <DependentUpon>202003192322088_initialize.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Etiket.cs" />
     <Compile Include="Models\Kategori.cs" />
     <Compile Include="Models\Kullanici.cs" />
-    <Compile Include="Models\KullaniciRol.cs" />
     <Compile Include="Models\Makale.cs" />
-    <Compile Include="Models\MakaleResim.cs" />
     <Compile Include="Models\OmerKurtaranEntities.cs" />
     <Compile Include="Models\Resim.cs" />
     <Compile Include="Models\Rol.cs" />
@@ -472,6 +474,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003182250394_second.resx">
       <DependentUpon>202003182250394_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003192322088_initialize.resx">
+      <DependentUpon>202003192322088_initialize.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -12,7 +12,7 @@ namespace OmerKurtaran.WebUI.Models
     {
         public Rol()
         {
-            KullaniciRols = new HashSet<KullaniciRol>();
+            Kullanicis = new HashSet<Kullanici>();
 
         }
         [Key]
@@ -21,7 +21,7 @@ namespace OmerKurtaran.WebUI.Models
         [StringLength(100)]
         public string RolAdi { get; set; }
 
-        public virtual ICollection<KullaniciRol> KullaniciRols { get; set; }
+        public virtual ICollection<Kullanici> Kullanicis { get; set; }
 
 
     }

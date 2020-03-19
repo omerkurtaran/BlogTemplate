@@ -11,7 +11,7 @@ namespace OmerKurtaran.WebUI.Models
     {
         public Resim()
         {
-            MakaleResims = new HashSet<MakaleResim>();
+            Makales = new HashSet<Makale>();
         }
 
         [Key]
@@ -29,7 +29,7 @@ namespace OmerKurtaran.WebUI.Models
         [StringLength(250)]
         public string Video { get; set; }
 
-        public virtual ICollection<MakaleResim> MakaleResims { get; set; }
+        public virtual ICollection<Makale> Makales { get; set; }
 
 
 
