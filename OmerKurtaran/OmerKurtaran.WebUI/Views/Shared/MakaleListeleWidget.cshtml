@@ -28,14 +28,14 @@
                         <div class="text-overlay">
                             <div class="info"><span>Makaleye Git</span></div>
                         </div>
-                        <img src="@makale.MakaleResims.Select(z=>z.Resim).Select(z=>z.KucukBoyut)" alt="" />
+                        <img src="@makale.Resim.OrtaBoyut" alt="" />
                     </a>
                 </figure>
             </div>
             <div class="col-sm-8 post-content">
                 <div class="meta">
                     <span class="date">@makale.EklenmeTarihi.ToShortDateString()</span>
-                    <span class="comments"><a href="#">@makale.Yorums.Count<i class="icon-chat-1"></i></a></span>
+                    <span class="comments"><a href="~/Content/MakaleResim/OrtaBoyut/120.png">@makale.Yorums.Count<i class="icon-chat-1"></i></a></span>
                 </div>
                 <h2 class="post-title">
                     <a href="/Makale/Detay/@makale.MakaleId">@makale.Baslik</a>

@@ -10,6 +10,7 @@ namespace OmerKurtaran.WebUI.Models
         public OmerKurtaranEntities()
             : base("name=OmerKurtaranEntities")
         {
+            
         }
 
         public virtual DbSet<Etiket> Etikets { get; set; }

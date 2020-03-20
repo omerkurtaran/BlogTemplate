@@ -33,11 +33,14 @@ namespace OmerKurtaran.WebUI.Controllers
 
             Rol yazar = db.Rols.FirstOrDefault(x=>x.RolAdi == "Yazar");
 
-            //Kullanici kr = new Kullanici();
-            //kr.Rol = yazar.RolId;
-            //kr.KullaniciId = kl.KullaniciId;
+            Kullanici kr = new Kullanici();
+            kr.Rol.RolId = yazar.RolId;
+            kr.KullaniciId = kl.KullaniciId;
 
-            return View();
+            db.Kullanicis.Add(kr);
+            db.SaveChanges();
+
+            return RedirectToAction("Index","Home");
         }
 
     }

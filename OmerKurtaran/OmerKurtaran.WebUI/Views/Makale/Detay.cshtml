@@ -15,9 +15,9 @@
             </span>
             <span class="comments"><a href="#Yorum">@Model.Yorums.Count <i class="icon-chat-1"></i></a></span>
         </div>
-        <h1 class="post-title">@Model.Baslik</h1>
+        <h1 class="post-title">@Model.Baslik </h1>
         <figure class="main">
-            <img src="@Model.Resims" alt="" />
+            <img src="@Model.Resim.BuyukBoyut" alt="" />
         </figure>
         <div class="post-content">
             <p>@Model.Icerik</p>
@@ -48,8 +48,8 @@
 <div class="about-author dark-wrapper">
     <div class="author-image"> <img alt="" src="#" /> </div>
     <div class="author-details">
-        <h3>@Model.kul.Adi @Model.Yazar.Soyadi Hakkında</h3>
-        <p>@Model.Yazar.Aciklama</p>
+        <h3>@Model.Kullanici.Adi @Model.Kullanici.Soyadi Hakkında</h3>
+        <p>@Model.Kullanici.Aciklama</p>
         <ul class="social">
             <li><a href="#"><i class="icon-s-twitter"></i></a></li>
             <li><a href="#"><i class="icon-s-facebook"></i></a></li>

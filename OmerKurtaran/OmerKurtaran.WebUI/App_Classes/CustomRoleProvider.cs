@@ -45,7 +45,7 @@ namespace OmerKurtaran.WebUI.App_Classes
                 Kullanici kl = db.Kullanicis.FirstOrDefault(z => z.KullaniciAdi == username);
                 if (kl != null)
                 {
-                    return kl.Rols == null ? new string[] { } : kl.Rols.Select(z => z.RolAdi).ToArray();
+                    //return kl.Rol == null ? new string[] { } : kl.Rol.RolAdi.ToArray();
                 }
 
             }

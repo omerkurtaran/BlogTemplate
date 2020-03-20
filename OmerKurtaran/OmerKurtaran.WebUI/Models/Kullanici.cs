@@ -12,7 +12,7 @@ namespace OmerKurtaran.WebUI.Models
         public Kullanici()
         {
             KayitTarihi = DateTime.Now;
-            Rols = new HashSet<Rol>();
+            //Rols = new HashSet<Rol>();
             Makales = new HashSet<Makale>();
         }
         [Key]
@@ -51,7 +51,12 @@ namespace OmerKurtaran.WebUI.Models
         [DisplayFormat(DataFormatString = "{0:MM/DD/YYYY}")]
         public DateTime? KayitTarihi { get; set; }
 
-        public virtual ICollection<Rol> Rols { get; set; }
+        [ForeignKey("Rol")]
+        public int RolID { get; set; }
+
+        public virtual Rol Rol { get; set; }
+
+        //public virtual ICollection<Rol> Rols { get; set; }
 
         public virtual ICollection<Makale> Makales { get; set; }
 
