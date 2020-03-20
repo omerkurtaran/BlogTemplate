@@ -388,17 +388,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003172311092_base.cs" />
-    <Compile Include="Migrations\202003172311092_base.designer.cs">
-      <DependentUpon>202003172311092_base.cs</DependentUpon>
+    <Compile Include="Migrations\202003201953078_initial.cs" />
+    <Compile Include="Migrations\202003201953078_initial.designer.cs">
+      <DependentUpon>202003201953078_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003182250394_second.cs" />
-    <Compile Include="Migrations\202003182250394_second.designer.cs">
-      <DependentUpon>202003182250394_second.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003192322088_initialize.cs" />
-    <Compile Include="Migrations\202003192322088_initialize.designer.cs">
-      <DependentUpon>202003192322088_initialize.cs</DependentUpon>
+    <Compile Include="Migrations\202003202001273_kullanici.cs" />
+    <Compile Include="Migrations\202003202001273_kullanici.designer.cs">
+      <DependentUpon>202003202001273_kullanici.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Etiket.cs" />
@@ -471,14 +467,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003172311092_base.resx">
-      <DependentUpon>202003172311092_base.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003201953078_initial.resx">
+      <DependentUpon>202003201953078_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003182250394_second.resx">
-      <DependentUpon>202003182250394_second.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003192322088_initialize.resx">
-      <DependentUpon>202003192322088_initialize.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003202001273_kullanici.resx">
+      <DependentUpon>202003202001273_kullanici.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

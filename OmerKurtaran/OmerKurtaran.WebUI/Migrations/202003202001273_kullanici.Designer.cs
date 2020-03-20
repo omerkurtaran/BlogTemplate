@@ -7,18 +7,18 @@ namespace OmerKurtaran.WebUI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class initialize : IMigrationMetadata
+    public sealed partial class kullanici : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initialize));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(kullanici));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003192322088_initialize"; }
+            get { return "202003202001273_kullanici"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

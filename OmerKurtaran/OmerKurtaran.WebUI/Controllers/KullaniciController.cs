@@ -44,7 +44,7 @@ namespace OmerKurtaran.WebUI.Controllers
 
             }
             //ındex home a al
-            return RedirectToAction("GirisYap");
+            return RedirectToAction("Index","Home");
 
         }
 

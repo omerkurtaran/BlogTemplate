@@ -34,12 +34,12 @@ namespace OmerKurtaran.WebUI.Models
         public int? GoruntulenmeSayisi { get; set; }
 
         public int? Begeni { get; set; }
-
+       
         [ForeignKey("Kullanici")]
         public int? KullaniciID { get; set; }
 
-        public Kullanici Kullanici { get; set; }
-          
+        public virtual Kullanici Kullanici { get; set; }
+
         public virtual Kategori Kategori { get; set; }
 
         [ForeignKey("Resim")]

@@ -35,7 +35,7 @@
                             @if (User.IsInRole("Yazar"))
                             {
                                 <li class="current dropdown">
-                                    <a href="/Yazar/Index" class="dropdown-toggle js-activated">Yazar Paneli</a>
+                                    <a href="/Yazar/Index" >Yazar Paneli</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
                                         <li><a href="/Yazar/Makalelerim">Makalelerim </a></li>
@@ -49,7 +49,7 @@
                             @if (User.IsInRole("Admin"))
                             {
                                 <li class="dropdown">
-                                    <a href="/Admin/Index" class="dropdown-toggle js-activated">Admin Paneli</a>
+                                    <a href="/Admin/Index" >Admin Paneli</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
                                         <li><a href="/Kategori/KategoriEkle">Kategori Ekle</a></li>
@@ -64,7 +64,7 @@
                             @if (!User.IsInRole("Yazar") || !User.Identity.IsAuthenticated || !User.IsInRole("Admin"))
                             {
                                 <li >
-                                    <a href="/Yazar/YazarOl" class="dropdown-toggle js-activated">Yazar Ol</a>
+                                    <a href="/Yazar/YazarOl" >Yazar Ol</a>
 
                                 </li>
                             }
@@ -73,7 +73,7 @@
                             @if (!User.Identity.IsAuthenticated)
                             {
                                 <li >
-                                    <a href="/Kullanici/UyeOl" class="dropdown-toggle js-activated">Üye Ol</a>
+                                    <a href="/Kullanici/UyeOl" >Üye Ol</a>
 
                                 </li>
                             }

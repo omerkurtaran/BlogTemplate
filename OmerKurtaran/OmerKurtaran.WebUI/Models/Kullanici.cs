@@ -12,7 +12,6 @@ namespace OmerKurtaran.WebUI.Models
         public Kullanici()
         {
             KayitTarihi = DateTime.Now;
-            //Rols = new HashSet<Rol>();
             Makales = new HashSet<Makale>();
         }
         [Key]
@@ -55,8 +54,6 @@ namespace OmerKurtaran.WebUI.Models
         public int RolID { get; set; }
 
         public virtual Rol Rol { get; set; }
-
-        //public virtual ICollection<Rol> Rols { get; set; }
 
         public virtual ICollection<Makale> Makales { get; set; }
 
