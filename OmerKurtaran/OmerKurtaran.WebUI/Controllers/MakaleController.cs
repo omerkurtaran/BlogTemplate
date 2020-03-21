@@ -23,7 +23,7 @@ namespace OmerKurtaran.WebUI.Controllers
             var data = db.Makales.FirstOrDefault(z => z.MakaleId == id);
             return View(data);
         }
-        [Authorize(Roles = "Admin,Yazar")]
+        [Authorize(Roles = "Admin")]
         public ActionResult MakaleEkle()
         {
             return View();

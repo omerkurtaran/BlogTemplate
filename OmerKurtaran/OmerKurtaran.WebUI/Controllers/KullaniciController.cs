@@ -44,7 +44,7 @@ namespace OmerKurtaran.WebUI.Controllers
 
             }
             //ındex home a al
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("GirisYap");
 
         }
 
@@ -53,7 +53,7 @@ namespace OmerKurtaran.WebUI.Controllers
             Kullanici kl = db.Kullanicis.FirstOrDefault(z => z.KullaniciAdi == ka && z.Parola == pwd);
 
             if (kl != null)
-            {
+            {      
                 return kl.KullaniciAdi;
             }
             else
