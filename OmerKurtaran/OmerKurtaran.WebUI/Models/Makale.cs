@@ -15,6 +15,7 @@ namespace OmerKurtaran.WebUI.Models
         {
             Yorums = new HashSet<Yorum>();
             Etikets = new HashSet<Etiket>();
+            EklenmeTarihi = DateTime.Now;
         }
         [Key]
         public int MakaleId { get; set; }
@@ -26,13 +27,17 @@ namespace OmerKurtaran.WebUI.Models
         [Required]
         public string Icerik { get; set; }
 
-        [DefaultValue(typeof(DateTime), "")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM/DD/YYYY}")]
         public DateTime EklenmeTarihi { get; set; }
 
+        [DefaultValue(0)]
         public int? KategoriID { get; set; }
 
+        [DefaultValue(0)]
         public int? GoruntulenmeSayisi { get; set; }
 
+        [DefaultValue(0)]
         public int? Begeni { get; set; }
        
         [ForeignKey("Kullanici")]

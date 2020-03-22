@@ -106,7 +106,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\image\comment.png" />
     <Content Include="Content\image\defaultUser.png" />
+    <Content Include="Content\image\like1.png" />
     <Content Include="Content\index.html" />
     <Content Include="Content\MakaleResim\BuyukBoyut\120.png" />
     <Content Include="Content\MakaleResim\KucukBoyut\120.png" />
@@ -456,6 +458,7 @@
     <Content Include="Views\Kullanici\UyeOL.cshtml" />
     <Content Include="Views\Yazar\YazarOl.cshtml" />
     <Content Include="Views\Admin\YazarOnaylari.cshtml" />
+    <Content Include="Views\Makale\Ekle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

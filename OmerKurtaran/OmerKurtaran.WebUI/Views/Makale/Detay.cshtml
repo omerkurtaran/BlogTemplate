@@ -21,7 +21,7 @@
         </figure>
         <div class="post-content">
             <p>@Model.Icerik</p>
-        
+
             <div class="meta tags">
                 @foreach (OmerKurtaran.WebUI.Models.Etiket etiket in Model.Etikets)
                 {
@@ -74,9 +74,9 @@
                         <div class="arrow-box">
                             <div class="info">
                                 <h2><a href="#">@yorum.AdSoyad</a></h2>
-                                <div class="meta"> 
-                                  <span class="date">@yorum.EklenmeTarihi.Value.ToShortDateString()</span> 
-                                  <span class="reply"><a class="reply-link" href="#">Reply</a></span> 
+                                <div class="meta">
+                                    <span class="date">@yorum.EklenmeTarihi.Value.ToShortDateString()</span>
+                                    <span class="reply"><a class="reply-link" href="#">Reply</a></span>
                                 </div>
                             </div>
                             <p>@yorum.Yorum1</p>

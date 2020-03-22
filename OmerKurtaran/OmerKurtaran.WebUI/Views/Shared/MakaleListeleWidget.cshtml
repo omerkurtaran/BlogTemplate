@@ -1,7 +1,27 @@
 ﻿
-@{ 
+@{
     Layout = null;
 }
+<script src="/Content/style/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function myfunction() {
+        $("a.begen").click(function myfunction() {
+            var id = $(this).data("id");
+            //alert(id);
+            var link = "/Makale/Begen/" + id;
+            //alert(link);
+            $.ajax({
+                type: "GET",
+                url: link,
+                success: function (result) {
+                    $("a.begen").html(result);
+                }
+            });
+
+        });
+    });
+</script>
+
 
 @model IEnumerable<OmerKurtaran.WebUI.Models.Makale>
 
@@ -19,7 +39,7 @@
 }
 
 <div class="blog-posts col-blog">
-    @foreach(OmerKurtaran.WebUI.Models.Makale makale in Model)
+    @foreach (OmerKurtaran.WebUI.Models.Makale makale in Model)
     {
         <div class="post row">
             <div class="col-sm-4">
@@ -35,7 +55,21 @@
             <div class="col-sm-8 post-content">
                 <div class="meta">
                     <span class="date">@makale.EklenmeTarihi.ToShortDateString()</span>
-                    <span class="comments"><a href="~/Content/MakaleResim/OrtaBoyut/120.png">@makale.Yorums.Count<i class="icon-chat-1"></i></a></span>
+                    <span class="comments">
+                        <a href="#">
+                            @makale.Yorums.Count
+                            <span class="glyphicon">&#xe111;</span>
+                        </a>
+                    </span>
+
+                    <span>
+                        <a class="begen" href="javascript:void(0)" data-id="@makale.MakaleId"  >
+                            @makale.Begeni
+                            <span class="glyphicon">&#xe125;</span>
+                        </a>
+                    </span>
+
+
                 </div>
                 <h2 class="post-title">
                     <a href="/Makale/Detay/@makale.MakaleId">@makale.Baslik</a>
@@ -49,3 +83,4 @@
 
 
 </div>
+

@@ -7,6 +7,8 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/Content/style/images/favicon.png">
     <title>Keepsake - @ViewBag.Title</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Bootstrap core CSS -->
     <link href="/Content/style/css/bootstrap.min.css" rel="stylesheet">
     <link href="/Content/style/css/plugins.css" rel="stylesheet">
@@ -14,7 +16,7 @@
     <link href="/Content/style/css/color/red.css" rel="stylesheet">
     <link href="/Content/style/type/bebas.css" rel="stylesheet">
     <link href="/Content/style/type/fontello.css" rel="stylesheet">
-    @RenderSection("head",false)
+    @RenderSection("head", false)
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
 </head>
@@ -26,7 +28,7 @@
                 <div class="container">
                     <div class="basic-wrapper">
                         <a class="btn responsive-menu pull-right" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                        <div class="navbar-brand"><a href="index.html"><img src="/Content/style/images/logo.png" alt="" data-src="/Content/style/images/logo.png" data-ret="/Content/style/images/logo@2x.png" class="retina" /></a></div>
+                        <div class="navbar-brand"><a href="/Home/Index"><img src="/Content/style/images/logo.png" alt="" data-src="/Content/style/images/logo.png" data-ret="/Content/style/images/logo@2x.png" class="retina" /></a></div>
                     </div>
                     <nav class="collapse navbar-collapse pull-right">
                         <ul class="nav navbar-nav">
@@ -35,23 +37,23 @@
                             @if (User.IsInRole("Yazar"))
                             {
                                 <li class="current dropdown">
-                                    <a class="dropdown-toggle js-activated" href="/Yazar/Index" >Yazar Paneli</a>
+                                    <a class="dropdown-toggle js-activated" href="/Yazar/Index">Yazar Paneli</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
                                         <li><a href="/Yazar/Makalelerim">Makalelerim </a></li>
                                         @*<li><a href="blog3.html">Grid View 2 Columns</a></li>
-                    <li><a href="blog4.html">Grid View 3 Columns</a></li>
-                    <li><a href="blog-post.html">Blog Post</a></li>*@
+                                            <li><a href="blog4.html">Grid View 3 Columns</a></li>
+                                            <li><a href="blog-post.html">Blog Post</a></li>*@
                                     </ul>
                                 </li>
                             }
 
                             @if (User.IsInRole("Admin"))
                             {
-                                <li class="dropdown" >
-                                    <a class="dropdown-toggle js-activated" href="/Admin/Index" >Admin Paneli</a>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle js-activated" href="/Admin/Index">Admin Paneli</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
+                                        <li><a href="/Makale/Ekle">Makale Ekle</a></li>
                                         <li><a href="/Kategori/KategoriEkle">Kategori Ekle</a></li>
                                         <li><a href="/Etiket/EtiketEkle">Etiket Ekle</a></li>
                                         <li><a href="/Admin/RolEkle">Rol Ekle</a></li>
@@ -63,8 +65,8 @@
 
                             @if (!User.IsInRole("Yazar") || !User.Identity.IsAuthenticated || !User.IsInRole("Admin"))
                             {
-                                <li >
-                                    <a href="/Yazar/YazarOl" >Yazar Ol</a>
+                                <li>
+                                    <a href="/Yazar/YazarOl">Yazar Ol</a>
 
                                 </li>
                             }
@@ -72,15 +74,15 @@
 
                             @if (!User.Identity.IsAuthenticated)
                             {
-                                <li >
-                                    <a href="/Kullanici/UyeOl" >uye Ol</a>
+                                <li>
+                                    <a href="/Kullanici/UyeOl">uye Ol</a>
 
                                 </li>
                             }
 
 
                             @*otantike olmuşsa çıkış yap görülsün
-                              olmamışsa giriş yap gözüksün
+                                olmamışsa giriş yap gözüksün
                             *@
                             @if (User.Identity.IsAuthenticated)
                             {
@@ -100,7 +102,7 @@
                                 <ul class="button-group dropdown-menu dropdown-menu-right share-links">
                                     <li><a href="#" class="btn"><i class="icon-s-facebook"></i></a></li>
                                     <li><a href="#" class="btn"><i class="icon-s-twitter"></i></a></li>
-                                    <li><a href="#" class="btn"><i class="icon-s-pinterest"></i></a></li>
+                                    <li><a href="#" class="btn"><i class="icon-s-linkedin"></i></a></li>
                                 </ul>
                             </li>
                             <!--/social-dropdown -->
@@ -288,6 +290,8 @@
         <!-- /footer -->
     </div>
     <!--/.body-wrapper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/Content/style/js/jquery.min.js"></script>
     <script src="/Content/style/js/bootstrap.min.js"></script>
     <script src="/Content/style/js/plugins.js"></script>
