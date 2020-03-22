@@ -35,7 +35,7 @@
                             @if (User.IsInRole("Yazar"))
                             {
                                 <li class="current dropdown">
-                                    <a href="/Yazar/Index" >Yazar Paneli</a>
+                                    <a class="dropdown-toggle js-activated" href="/Yazar/Index" >Yazar Paneli</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
                                         <li><a href="/Yazar/Makalelerim">Makalelerim </a></li>
@@ -48,15 +48,15 @@
 
                             @if (User.IsInRole("Admin"))
                             {
-                                <li class="dropdown">
-                                    <a href="/Admin/Index" >Admin Paneli</a>
+                                <li class="dropdown" >
+                                    <a class="dropdown-toggle js-activated" href="/Admin/Index" >Admin Paneli</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
                                         <li><a href="/Kategori/KategoriEkle">Kategori Ekle</a></li>
                                         <li><a href="/Etiket/EtiketEkle">Etiket Ekle</a></li>
                                         <li><a href="/Admin/RolEkle">Rol Ekle</a></li>
-                                        <li><a href="/Admin/KullaniciEkle">Kullanıcı Ekle</a></li>
-                                        <li><a href="/Admin/YazarOnaylari">Yazar Onayları</a></li>
+                                        <li><a href="/Admin/KullaniciEkle">Kullanici Ekle</a></li>
+                                        <li><a href="/Admin/YazarOnaylari">Yazar Onaylari</a></li>
                                     </ul>
                                 </li>
                             }
@@ -73,7 +73,7 @@
                             @if (!User.Identity.IsAuthenticated)
                             {
                                 <li >
-                                    <a href="/Kullanici/UyeOl" >Üye Ol</a>
+                                    <a href="/Kullanici/UyeOl" >uye Ol</a>
 
                                 </li>
                             }
@@ -117,7 +117,7 @@
         <div class="offset"></div>
         <div class="dark-wrapper page-title">
             <div class="container inner">
-                <h1> Ömer KURTARAN </h1>
+                <h1> Ömer KURTARAN Blog</h1>
             </div>
             <!--/.container -->
         </div>
