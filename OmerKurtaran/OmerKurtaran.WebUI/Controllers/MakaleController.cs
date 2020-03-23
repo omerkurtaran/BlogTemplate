@@ -26,11 +26,11 @@ namespace OmerKurtaran.WebUI.Controllers
             var data = db.Makales.FirstOrDefault(z => z.MakaleId == id);
             return View(data);
         }
-        [Authorize(Roles = "Admin")]
-        public ActionResult MakaleEkle()
-        {
-            return View();
-        }
+        //[Authorize(Roles = "Admin")]
+        //public ActionResult MakaleEkle()
+        //{
+        //    return View();
+        //}
 
         [AllowAnonymous]
         public string Begen(int id)
@@ -83,5 +83,18 @@ namespace OmerKurtaran.WebUI.Controllers
         }
 
 
+        public ActionResult YorumEkle()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YorumEkle(Yorum yrm)
+        {
+            yrm.Begeni = 0;
+            db.Yorums.Add(yrm);
+            db.SaveChanges();
+            return Redirect("/Makale/Detay/"+yrm.MakaleID);
+        }
     }
 }

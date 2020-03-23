@@ -9,15 +9,20 @@ namespace OmerKurtaran.WebUI.Models
     [Table("Yorum")]
     public partial class Yorum
     {
+        public Yorum()
+        {
+            EklenmeTarihi = DateTime.Now;
+        }
         public int YorumId { get; set; }
-
-        [Column("Yorum")]
+   
         [Required]
         [StringLength(1500)]
-        public string Yorum1 { get; set; }
+        public string Ýcerik { get; set; }
 
         public int MakaleID { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM/DD/YYYY}")]
         public DateTime? EklenmeTarihi { get; set; }
 
         [Required]

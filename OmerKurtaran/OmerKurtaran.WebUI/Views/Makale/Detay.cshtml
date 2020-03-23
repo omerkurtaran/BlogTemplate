@@ -48,7 +48,7 @@
 <div class="about-author dark-wrapper">
     <div class="author-image"> <img alt="" src="#" /> </div>
     <div class="author-details">
-        <h3>@Model.Kullanici.Adi @Model.Kullanici.Soyadi Hakkında</h3>
+        <h3>Yazar @Model.Kullanici.Adi @Model.Kullanici.Soyadi </h3>
         <p>@Model.Kullanici.Aciklama</p>
         <ul class="social">
             <li><a href="#"><i class="icon-s-twitter"></i></a></li>
@@ -69,7 +69,7 @@
         {
             <li>
                 <div class="comment-wrapper">
-                    <div class="user"><img alt="" src="~/Content/image/defaultUser.png" class="avatar" /></div>
+                    <div class="user"><img alt="" src="~/Content/image/comment.png" class="avatar" /></div>
                     <div class="message">
                         <div class="arrow-box">
                             <div class="info">
@@ -79,7 +79,7 @@
                                     <span class="reply"><a class="reply-link" href="#">Reply</a></span>
                                 </div>
                             </div>
-                            <p>@yorum.Yorum1</p>
+                            <p>@yorum.İcerik</p>
                         </div>
                     </div>
                 </div>
@@ -93,24 +93,25 @@
 <div class="divide100"></div>
 <div class="comment-form-wrapper">
     <h3>Düsüncelerini paylasmak ister misin?</h3>
-    <p>E-Mail adresiniz yayinlanmayacaktir. Zorunlu alanlar * ile isaretlenmistir.</p>
-    <form class="comment-form" name="form_name" action="/Makale/YorumYaz/@Model.MakaleId" method="post">
+    @*<p>E-Mail adresiniz yayinlanmayacaktir. Zorunlu alanlar * ile isaretlenmistir.</p>*@
+    <form class="comment-form" action="/Makale/YorumEkle/@Model.MakaleId" method="post">
+        @Html.Hidden("MakaleID")
         <div class="name-field">
             <label><i class="icon-user"></i></label>
             <input type="text" name="AdSoyad" placeholder="İsim Soyisim" />
         </div>
-        <div class="email-field">
+        @*<div class="email-field">s
             <label><i class="icon-mail-alt"></i></label>
             <input type="text" name="mail" placeholder="Email*" />
         </div>
         <div class="website-field">
             <label><i class="icon-globe"></i></label>
             <input type="text" name="website" placeholder="Website" />
-        </div>
+        </div>*@
         <div class="message-field">
-            <textarea name="Yorum" id="textarea" rows="5" cols="30" placeholder="Yorumunuz..."></textarea>
+            <textarea name="İcerik" id="textarea" rows="5" cols="30" placeholder="Yorumunuz..."></textarea>
         </div>
-        <input type="submit" value="Gönder" name="submit" class="btn btn-submit" />
+        <input type="submit" value="Gönder" name="name" class="btn btn-submit" />
     </form>
 </div>
 <!-- /.comment-form-wrapper -->

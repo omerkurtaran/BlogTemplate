@@ -16,7 +16,7 @@
         <tr>
             <td>Kategori</td>
             <td>
-                <select>
+                <select name="KategoriID">
                     @foreach (OmerKurtaran.WebUI.Models.Kategori item in ViewBag.Kategoriler)
                     {
                         <option value="@item.KategoriId">@item.Adi</option>

@@ -1,6 +1,8 @@
 ﻿
 @{
-    Layout = null;
+                /**/
+
+                Layout = null;
 }
 <script src="/Content/style/js/jquery.min.js"></script>
 <script>
@@ -27,15 +29,17 @@
 
 @helper IcerikKisalt(string icerik)
 {
-    if (icerik.Length > 300)
-    {
-        @icerik.Substring(0, 300);
+                    /**/
 
-    }
-    else
-    {
-        @icerik;
-    }
+                    if (icerik.Length > 300)
+                    {
+                        @icerik.Substring(0, 300);
+
+                    }
+                    else
+                    {
+                        @icerik     ;
+                    }
 }
 
 <div class="blog-posts col-blog">
@@ -63,7 +67,7 @@
                     </span>
 
                     <span>
-                        <a class="begen" href="javascript:void(0)" data-id="@makale.MakaleId"  >
+                        <a class="begen" href="javascript:void(0)" data-id="@makale.MakaleId">
                             @makale.Begeni
                             <span class="glyphicon">&#xe125;</span>
                         </a>
