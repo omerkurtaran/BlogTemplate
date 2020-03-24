@@ -22,5 +22,10 @@ namespace OmerKurtaran.WebUI.Controllers
             return View("MakaleListeleWidget",data);
         }
 
+        public ActionResult KategoriEkle()
+        {
+            return View();
+        }
+
     }
 }

@@ -33,6 +33,10 @@ namespace OmerKurtaran.WebUI.Controllers
             return PartialView(model);
         }
             
+        public ActionResult Hakkimda()
+        {
+            return View();
+        }
 
     }
 }

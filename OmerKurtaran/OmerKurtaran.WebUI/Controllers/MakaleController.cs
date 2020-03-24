@@ -88,6 +88,7 @@ namespace OmerKurtaran.WebUI.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult YorumEkle(Yorum yrm)
         {
@@ -96,5 +97,16 @@ namespace OmerKurtaran.WebUI.Controllers
             db.SaveChanges();
             return Redirect("/Makale/Detay/"+yrm.MakaleID);
         }
+
+        [Authorize(Roles = "Admin,Yazar")]
+        public ActionResult YorumSil(int id)
+        {
+            Yorum yrm = db.Yorums.FirstOrDefault(z=>z.YorumId == id);
+            int a = yrm.MakaleID;
+            db.Yorums.Remove(yrm);
+            db.SaveChanges();
+            return Redirect("/Makale/Detay/"+a) ;
+        }
+
     }
 }

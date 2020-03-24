@@ -70,6 +70,7 @@
             <li>
                 <div class="comment-wrapper">
                     <div class="user"><img alt="" src="~/Content/image/comment.png" class="avatar" /></div>
+
                     <div class="message">
                         <div class="arrow-box">
                             <div class="info">
@@ -82,6 +83,11 @@
                             <p>@yorum.İcerik</p>
                         </div>
                     </div>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Yazar"))
+                    {
+                        <a href="/Makale/YorumSil/@yorum.YorumId" class="btn btn-danger btn-sm">Sil</a>
+                    }
+
                 </div>
             </li>
         }

@@ -471,6 +471,7 @@
     <Content Include="Views\Yazar\YazarOl.cshtml" />
     <Content Include="Views\Admin\YazarOnaylari.cshtml" />
     <Content Include="Views\Makale\Ekle.cshtml" />
+    <Content Include="Views\Home\Hakkımda.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

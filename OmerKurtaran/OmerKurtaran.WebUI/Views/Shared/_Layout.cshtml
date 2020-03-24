@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="/Content/style/images/favicon.png">
     <title>OMER KURTARAN - @ViewBag.Title</title>
     <!-- Bootstrap CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Bootstrap core CSS -->
     <link href="/Content/style/css/bootstrap.min.css" rel="stylesheet">
@@ -34,16 +36,18 @@
                         <ul class="nav navbar-nav">
                             <li><a href="/Home/Index">AnaSayfa</a></li>
 
+                            <li><a href="/Home/Hakkimda">Hakkimda</a></li>
+
                             @if (User.IsInRole("Yazar"))
                             {
                                 <li class="current dropdown">
                                     <a class="dropdown-toggle js-activated" href="/Yazar/Index">Yazar Paneli</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="/Makale/MakaleEkle">Makale Ekle</a></li>
-                                        <li><a href="/Yazar/Makalelerim">Makalelerim </a></li>
+                                        <li><a href="/Makale/Ekle">Makale Ekle</a></li>
+                                        @*<li><a href="/Yazar/Makalelerim">Makalelerim </a></li>*@
                                         @*<li><a href="blog3.html">Grid View 2 Columns</a></li>
-                                            <li><a href="blog4.html">Grid View 3 Columns</a></li>
-                                            <li><a href="blog-post.html">Blog Post</a></li>*@
+                    <li><a href="blog4.html">Grid View 3 Columns</a></li>
+                    <li><a href="blog-post.html">Blog Post</a></li>*@
                                     </ul>
                                 </li>
                             }
@@ -63,7 +67,7 @@
                                 </li>
                             }
 
-                            @if (!User.IsInRole("Yazar") || !User.Identity.IsAuthenticated || !User.IsInRole("Admin"))
+                            @if (User.IsInRole("Üye"))
                             {
                                 <li>
                                     <a href="/Yazar/YazarOl">Yazar Ol</a>
@@ -82,7 +86,7 @@
 
 
                             @*otantike olmuşsa çıkış yap görülsün
-                                olmamışsa giriş yap gözüksün
+        olmamışsa giriş yap gözüksün
                             *@
                             @if (User.Identity.IsAuthenticated)
                             {
@@ -271,8 +275,7 @@
         <!-- /footer -->
     </div>
     <!--/.body-wrapper -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script src="/Content/style/js/jquery.min.js"></script>
     <script src="/Content/style/js/bootstrap.min.js"></script>
     <script src="/Content/style/js/plugins.js"></script>
